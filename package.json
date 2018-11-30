@@ -1,0 +1,15 @@
+{
+  "name": "homework_8-portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o  assets/css/ --recursive"
+  },
+  "author": "Swarnakshi Kapil",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.10.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}
