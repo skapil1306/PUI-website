@@ -1,12 +1,21 @@
-/* NAVBAR STARTS HERE */
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* --------NAVBAR STARTS HERE---------- */
 
 header {
     position: fixed;
     z-index: 2;
     width: 100%;
-    background-color: black;
 }
 
+/* hamburger menu button */
 .menu-button {
     top: 35px;
     right: 35px;
@@ -23,6 +32,7 @@ header {
     transition: all 0.5s ease-out;
 }
 
+/* rotation animations */
 .close {
     transform: rotate(180deg);
 }
@@ -36,3 +46,108 @@ header {
 .close .btn-line:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
 }
+
+/* overlay on button click */
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.8;
+    visibility: hidden;
+}
+
+.menu .show {
+    visibility: visible;
+}
+
+.menu-brand, .menu-nav {
+    display: flex;
+    float: left;
+    flex-flow: column wrap;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*right side wigh animations*/
+.menu-nav {
+    margin: 0;
+    padding: 0;
+    background: dimgray;
+    list-style: none;
+
+    /*sliding from the top*/
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out;
+}
+
+.menu-nav.show {
+    transform: translate3d(0, 0, 0);
+    transition: all 0.5s ease-out;
+}
+
+/*left side with animations*/
+.menu-brand {
+    background: grey;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out;
+}
+
+.menu-brand.show {
+    transform: translate3d(0, 0, 0);
+}
+
+.picture {
+    height: 250px;
+    width: 250px;
+    background: url('../images/about/me.jpg');
+    background-size: contain;
+}
+
+/* nav items start here*/
+
+.menu .nav-item {
+  transform: translate3d(600px, 0, 0);
+}
+
+.menu .nav-item.show {
+  transform: translate3d(0, 0, 0);
+}
+
+.menu .nav-item.current > a {
+  color: white;
+}
+
+.menu .nav-link {
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-size: 110%;
+  padding: 20px 0;
+  color: set-text-color(grey);
+  text-decoration: none;
+}
+
+.menu .nav-link:hover {
+  color: #f4dc42;
+}
+
+/* ------NAVBAR ENDS HERE-------- */
+
+/* MEDIA QUERIES */
+
+/* for mobile screen */
+@media screen and (max-device-width: 640px) {
+    
+    .menu .nav-link {
+        font-size: 20px;
+    }
+}
+
+/* for tablets */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+

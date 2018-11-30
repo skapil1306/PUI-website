@@ -5,11 +5,12 @@ window.onload = function() {
     const menu = document.querySelector('.menu');
     const menuNav = document.querySelector('.menu-nav');
     const menuBrand = document.querySelector('.menu-brand');
-    const navItem = document.querySelector('.nav-item');
+    const navItem = document.querySelectorAll('.nav-item');
     
     let showMenu = false;
     menuBtn.addEventListener('click', toggle);
     
+    //toggling the menu. If showMenu flag is false, displays menu on click, otherwise hides it.
     function toggle() {
         if (!showMenu) {
             menuBtn.classList.add('close');
@@ -19,6 +20,7 @@ window.onload = function() {
             
             navItem.forEach(item => item.classList.add('show'));
             showMenu = true;
+            console.log('showing');
         }
         else {
             menuBtn.classList.remove('close');
@@ -28,6 +30,7 @@ window.onload = function() {
             
             navItem.forEach(item => item.classList.remove('show'));
             showMenu = false;
+            console.log('not showing');
         }
     }
     
