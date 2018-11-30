@@ -1,5 +1,6 @@
 window.onload = function() {
     
+    //NAVIGATION BAR
     //selecting items
     const menuBtn = document.querySelector('.menu-button');
     const menu = document.querySelector('.menu');
@@ -33,5 +34,8 @@ window.onload = function() {
             console.log('not showing');
         }
     }
+    
+    //PROJECTS PAGE
+    
     
 }

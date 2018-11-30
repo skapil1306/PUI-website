@@ -53,6 +53,7 @@ h1 {
 @media screen and (max-device-width: 640px) {
     h1 {
         font-size: 40px;
+        font-weight: 300;
     }
     
     .title {
