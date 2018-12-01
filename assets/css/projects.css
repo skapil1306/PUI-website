@@ -38,8 +38,9 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.95;
     visibility: hidden;
+    z-index: 2;
 }
 
 .menu .show {
@@ -131,4 +132,186 @@ body {
 header a {
     text-decoration: none;
     color: white;
+}
+
+.projects-title {
+    text-align: center;
+}
+
+/* ------FILTER------- */
+
+#portfolio {
+    width: 100%;
+    margin: 2em auto;
+}
+
+#portfolio-sort {
+    text-align: center;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 1em;
+}
+
+#portfolio-sort a {
+    color: white;
+    background: black;
+    text-decoration: none;
+    padding: 3%;
+}
+
+#portfolio-sort .sorting-fields {
+    display: grid;
+    grid-template-areas: 
+        'filter1 filter2 filter3 filter4 filter5';
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-gap: 5%;
+    margin: 5%;
+}
+
+
+/*#portfolio-content .all-portfolio-items { 
+    display: grid;
+    grid-template-areas: 
+        'portfolio-item portfolio-item portfolio-item'
+        'portfolio-item portfolio-item portfolio-item'
+        'portfolio-item';
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-gap: 3%;
+    margin: 3%;
+}*/
+
+.portfolio-item {
+    padding 0;
+    float: left;
+    margin: 2%;
+    width: 29%;
+    height: 12em;
+    text-align: center;
+}
+
+.all-portfolio-items a {
+    color: white;
+}
+
+.overlay {
+  opacity: 0;
+  transition: .5s ease;
+  background-color: dimgray;
+    height: 100%;
+}
+
+.overlay .text {
+    text-align: center;
+    padding: 10%;
+}
+
+
+#qc {
+    background: url('../images/projects/QC.png');
+    background-size: cover;
+}
+
+#qc:hover .overlay {
+    opacity: 0.9;
+}
+
+#avant-garde {
+    background: url('../images/projects/Avant-Garde.png');
+    background-size: cover;
+}
+
+#avant-garde:hover .overlay {
+    opacity: 0.9;
+}
+
+#bunbun {
+    background: url('../images/projects/bunbun.jpg');
+    background-size: cover;
+}
+
+#bunbun:hover .overlay {
+    opacity: 0.9;
+}
+
+#starbucks {
+    background: url('../images/projects/starbucks.png');
+    background-size: cover;
+}
+
+#starbucks:hover .overlay {
+    opacity: 0.9;
+}
+
+#takeherback {
+    background: url('../images/projects/takeherback.jpg');
+    background-size: cover;
+}
+
+#takeherback:hover .overlay {
+    opacity: 0.9;
+}
+
+#typography {
+    background: url('../images/projects/typography.jpg');
+    background-size: cover;
+}
+
+#typography:hover .overlay {
+    opacity: 0.9;
+}
+
+#vtime {
+    background: url('../images/projects/vtime.png');
+    background-size: cover;
+}
+
+#vtime:hover .overlay {
+    opacity: 0.9;
+}
+
+div[data-cat="serviceD"] {
+}
+
+div[data-cat="visualD"] {
+    background: #666;
+    color: #fff;
+}
+
+div[data-cat="webD"] {
+    background: #333;
+    color: #fff;
+}
+
+div[data-cat="experienceD"] {
+    background: #333;
+    color: #fff;
+}
+
+/* MEDIA QUERIES */
+
+/* for mobile screen */
+@media screen and (max-device-width: 640px) {
+    div.portfolio-item {
+        width: 80%;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    #portfolio-sort .sorting-fields {
+        float: left;
+        display: inline-flex;
+        margin: 2%;
+    }
+    
+    #portfolio-sort a {
+        font-size: 12px;
+        padding: 1%;
+        margin: 1%;
+    }
+    
+     .menu .nav-link {
+        font-size: 20px;
+    }
 }

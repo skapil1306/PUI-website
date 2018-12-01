@@ -13,6 +13,7 @@
     </head>
     
     <body>
+        <!-- navigation bar -->
         <header>
             <div class="menu-button">
               <div class="btn-line"></div>
@@ -41,18 +42,71 @@
                   </a>
                 </li>
                 <li class="nav-item current">
-                  <a href="" class="nav-link">
+                  <a href="resume.html" class="nav-link">
                     Resume
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a href="contact.html" class="nav-link">
-                    Contact
-                  </a>
-                </li>
+                
               </ul>
             </nav>
         </header>
+        
+        <div class="projects-title">
+            <h1>Projects</h1>
+        </div>
+        
+        <!-- Filtering projects according to their type-->
+        <div id="portfolio">
+            <div id="portfolio-sort">
+                <div class="sorting-fields">
+                    <a href="#" id="all" class="filter1">ALL</a>
+                    <a href="#" data-cat="serviceD" class="filter2">Service Design</a>
+                    <a href="#" data-cat="visualD" class="filter3">Visual Design</a>
+                    <a href="#" data-cat="webD" class="filter4">Web Design</a>
+                    <a href="#" data-cat="experienceD" class="filter5">Experience Design</a>
+                </div>
+            </div>
+            <div id="portfolio-content">
+                <div class="all-portfolio-items">
+                    <a href = "quick-care.html"><div class="portfolio-item" data-cat="serviceD" id="qc">
+                        <div class="overlay">
+                            <div class="text">QuickCare is a service that enables you to send care packages to your loved ones without paying costly shipping costs</div>
+                        </div>
+                    </div></a>
+                    <a href = "avant-garde.html"><div class="portfolio-item" data-cat="visualD" id="avant-garde">
+                        <div class="overlay">
+                            <div class="text">Poster design for a speaker series about Avant Garde architecture in America</div>
+                        </div>
+                    </div></a>
+                    <div class="portfolio-item" data-cat="webD" id="bunbun">
+                        <div class="overlay">
+                            <div class="text">A website for BunBun bake shop, which sells various flavors of gourmet cinnamon rolls</div>
+                        </div>
+                    </div>
+                    <a href = "starbucks.html"><div class="portfolio-item" data-cat="serviceD" id="starbucks">
+                        <div class="overlay">
+                            <div class="text">A redesign of Starbucks's online ordering service aimed at making Starbucks more environment friendly by reducing the amount of waste created by customers. </div>
+                        </div>
+                    </div></a>
+                    <div class="portfolio-item" data-cat="webD" id="takeherback">
+                        <div class="overlay">
+                            <div class="text">Website and logo design for TakeHerBack, an organization that rescues children from brothels all over the world.</div>
+                        </div>
+                    </div>
+                    <a href = "explorations.html"><div class="portfolio-item" data-cat="visualD" id="typography">
+                        <div class="overlay">
+                            <div class="text">Typographic explorations for interaction design studio at CMU</div>
+                        </div>
+                    </div></a>
+                    <div class="portfolio-item" data-cat="experienceD" id="vtime">
+                        <div class="overlay">
+                            <div class="text">Goggles that enable swimmers to time themselves while taking laps in the pool.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </body>
     
 </html>
